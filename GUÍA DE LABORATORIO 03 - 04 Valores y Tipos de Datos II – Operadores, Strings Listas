@@ -1,0 +1,112 @@
+ESTUDIANTE: Pandia Cáceres, Angelo Daniel.
+CÓDIGO : 27220119
+
+#EJERCICIO 01------------------------------------------------------------------------#EJERCICIO 01-------------------------------------------------------------------------------------------------
+texto = "python"
+print(list(texto))
+print(len(texto))
+
+
+#EJERCICIO 02------------------------------------------------------------------------#EJERCICIO 02-------------------------------------------------------------------------------------------------
+lista = "1, 1, 1, 1, 1"
+print(lista)
+lista2 = "2, 1, 2, 4, 8"
+print(lista2)
+lista3 = "3, 1, 3, 9, 27"
+print(lista3)
+lista4 = "4, 1, 4, 16, 64"
+print(lista4)
+lista5 = "5, 1, 5, 25, 125"
+print(lista5)
+
+
+#EJERCICIO 03------------------------------------------------------------------------#EJERCICIO 03-------------------------------------------------------------------------------------------------
+lista = ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']
+cambio_espacio = '#'.join(lista)
+print(cambio_espacio)
+
+
+#EJERCICIO 04------------------------------------------------------------------------#EJERCICIO 04-------------------------------------------------------------------------------------------------
+Nombre = "Edem"
+Edad = 250
+País = "Perú"
+Ciudad = "Ayacucho"
+Edem = "Nombre"
+numero = "Edem" 
+Edad1 = "Edad"
+Perú = "País"
+Ayacucho = "Ciudad"
+concepto2 = "{}\t {}\t {}\t {}.".format(Edem, Edad1, Perú, Ayacucho)
+concepto = "{}\t {}\t {}\t {}.". format(Nombre, Edad, País, Ciudad)
+print(concepto2)
+print(concepto)
+
+
+#EJERCICIO 05------------------------------------------------------------------------#EJERCICIO 05-------------------------------------------------------------------------------------------------
+radio = 10
+area = int(3.14 * radio ** 2)
+
+frase = 'El área de un circulo con radio {} es {} metros cuadrados.'.format(radio, area)
+print(frase)
+
+
+#EJERCICIO 06------------------------------------------------------------------------#EJERCICIO 06-------------------------------------------------------------------------------------------------
+a = 8 
+b = 6 
+
+suma = 8 + 6
+resta = 8 - 6 
+multiplicación = 8 * 6
+división = 8 / 6
+modulo = 8 % 6
+divisiónentera = 8 // 6
+exponente = 8 ** 6 
+print('a + b = ', suma)
+print('a + b = ', resta)
+print('a * b = ', multiplicación)
+print('a / b = ', división)
+print('a % b = ', modulo)
+print('a // b = ', divisiónentera)
+print('a ** b = ', exponente)
+
+
+#EJERCICIO 07------------------------------------------------------------------------#EJERCICIO 07-------------------------------------------------------------------------------------------------
+frase = "Estoy aprendiendo Python y me está gustando mucho. ¡Es genial!"
+nueva_lista = frase.split()
+
+print(len(frase))
+print(nueva_lista)
+print(len(nueva_lista))
+
+
+#EJERCICIO 08------------------------------------------------------------------------#EJERCICIO 08-------------------------------------------------------------------------------------------------
+texto = "Aprendiendo Python com Edem"
+orden = texto.split()
+invertir = " ".join(reversed(orden))
+print(invertir)
+
+
+#EJERCICIO 09------------------------------------------------------------------------#EJERCICIO 09-------------------------------------------------------------------------------------------------
+alfabeto = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
+frase = input("Ingrese la palabra o oración: ")
+clave = 1
+cifrado = " "
+
+for letra in frase.upper():
+    if letra in alfabeto:
+        indice = alfabeto.find(letra)
+        indice += clave
+        if indice >= 27:
+            indice -= 27
+        cifrado += alfabeto[indice]
+    else:
+        cifrado += letra
+print(cifrado)
+
+
+#EJERCICIO 10------------------------------------------------------------------------#EJERCICIO 10-------------------------------------------------------------------------------------------------
+palabra = input("Ingrese la palabra o frase: ").lower()
+if palabra == palabra[::-1]:
+    print("Es un polindromo")
+else: 
+    print("No es un polindromo")
