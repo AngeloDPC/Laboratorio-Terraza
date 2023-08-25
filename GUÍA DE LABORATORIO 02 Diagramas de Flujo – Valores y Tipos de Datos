@@ -1,0 +1,73 @@
+ESTUDIANTE: Pandia Cáceres, Angelo Daniel.
+CÓDIGO    : 27220119
+
+#EJERCICIO 01------------------------------------------------------------------#EJERCICIO 01-----------------------------------------------------------------------------------------------------
+Algoritmo Terreno
+	
+	definir Bm, bme, H como real
+	Escribir "Base mayor"
+	Leer Bm
+	
+	Escribir "Base menor"
+	Leer bme
+	
+	Escribir "Altura"
+	Leer H
+	
+	S = (Bm + bme)*H
+	Area = S/2
+	
+	Escribir "El área del terreno es:" ,Area
+	
+FinAlgoritmo
+
+
+
+#EJERCICIO 02------------------------------------------------------------------#EJERCICIO 02-----------------------------------------------------------------------------------------------------
+Algoritmo EmpresaDEM
+	definir añoN, añoA, Edad Como Entero
+	Escribir "Tú año de nacimiento es: "
+	Leer añoN
+	Escribir "El año actual es: "
+	Leer añoA
+	
+	Edad = añoA - añoN
+	
+	Escribir "Tu edad actual es: ",Edad 
+FinAlgoritmo
+
+
+#EJERCICIO 03------------------------------------------------------------------#EJERCICIO 03-----------------------------------------------------------------------------------------------------
+Algoritmo PotenciaEléctrica
+	Definir I, R, V, P Como Real
+	Escribir "Ingresa la corriente pero en amperios"
+	Leer  I
+	
+	R = 4 
+	V = I*R
+	P = V*I
+	
+	Escribir "La corriente en amperios es:", I
+	Escribir "la resistencia en ohmios es:", R
+	Escribir "El voltaje en voltios es:", V
+	Escribir "La potencia en watts es:", P
+	
+FinAlgoritmo
+
+
+#EJERCICIO 04------------------------------------------------------------------#EJERCICIO 04-----------------------------------------------------------------------------------------------------
+Algoritmo Empresa
+	Definir CTv, CT Como Real
+	Escribir 'Ingrese el valor de compra: '
+	Leer VC
+	Si VC > 3000 Entonces
+		Descuento = VC * 0.1
+	SiNo
+		Descuento = VC * 0.05
+	Fin Si
+	
+	Escribir "El descuento a aplicar sería de:", Descuento
+	Escribir "El total a pagar sería de:", VC - Descuento
+	
+FinAlgoritmo
+
