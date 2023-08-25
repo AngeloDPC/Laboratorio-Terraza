@@ -1,0 +1,99 @@
+ESTUDIANTE: Pandia Cáceres, Angelo Daniel.
+CÓDIGO    : 27220119
+
+#EJERCICIO 01------------------------------------------------------------------#EJERCICIO 01-----------------------------------------------------------------------------------------------------
+persona = {
+        'first_name': 'Edem',
+        'last_name':'Terraza',
+        'age': 31,
+        'country': 'Perú',
+        'is_married': True, #
+        'skills': ['JavaScript', 'React','Node','MongoDB','python'],
+        'address':{
+            'street': 'Space street',
+            '<ipcode':'02210'
+                }
+}
+
+#a
+print("-------------a-----------")
+print("-------------a-----------") 
+print(persona['skills'][2])
+
+#b
+print("-------------b-----------")
+print("-------------b-----------")
+for clave in persona:
+    if clave == 'skills':
+        for skills in persona['skills']:
+            print(skills)
+
+if 'python' not in persona['skills']:
+    print("NO esta")
+else:
+    print("SÍ esta")
+
+print(persona['skills'])
+
+#3
+print("------------c------------")
+print("------------c------------") 
+
+if 'skills' in persona:
+    habilidades = persona['skills']
+    if set(habilidades) == {'JavaScript', 'React'}:
+        print("Él es un desarrollador frontend")
+    elif set(habilidades) == {'Node', 'Python', 'MongoDB'}:
+        print("Él es un desarrollador backend")
+    elif set(habilidades) == {'React', 'Node', 'MongoDB'}:
+        print("Él es un desarrollador fullstack")
+    else:
+        print("Título desconocido")
+
+
+#EJERCICIO 01------------------------------------------------------------------#EJERCICIO 01-----------------------------------------------------------------------------------------------------
+import Countriesdata
+print("--------------a-------------")
+Countriesdata.num_1()
+print("--------------b-------------")
+Countriesdata.num_2()
+print("--------------c-------------")
+Countriesdata.num_3()    
+
+
+#Importado y clasificado como función
+# 1. Número total de idiomas
+def num_1():
+    all_languages = set()
+    for country in countries:
+        for language in country["languages"]:
+            all_languages.add(language)
+
+    print(f"Total number of languages: {len(all_languages)}")
+
+# 2. Diez idiomas más hablados
+def num_2():
+    language_count = {}
+    for country in countries:
+        for language in country["languages"]:
+            if language in language_count:
+                language_count[language] += 1
+            else:
+                language_count[language] = 1
+
+    sorted_languages = sorted(language_count.items(), key=lambda x: x[1], reverse=True)
+    top_languages = sorted_languages[:10]
+
+    print("Top 10 most spoken languages:")
+    for lang, count in top_languages:
+        print(f"{lang}: {count} countries")
+
+# 3. Diez países más poblados
+def num_3():
+    sorted_countries = sorted(countries, key=lambda x: x["population"], reverse=True)
+    top_populated_countries = sorted_countries[:10]
+
+    print("Top 10 most populated countries:")
+    for country in top_populated_countries:
+        print(f"{country['name']}: {country['population']} people")
+ 
