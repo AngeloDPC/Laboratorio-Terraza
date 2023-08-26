@@ -39,16 +39,14 @@ print(persona['skills'])
 print("------------c------------")
 print("------------c------------") 
 
-if 'skills' in persona:
-    habilidades = persona['skills']
-    if set(habilidades) == {'JavaScript', 'React'}:
-        print("Él es un desarrollador frontend")
-    elif set(habilidades) == {'Node', 'Python', 'MongoDB'}:
-        print("Él es un desarrollador backend")
-    elif set(habilidades) == {'React', 'Node', 'MongoDB'}:
-        print("Él es un desarrollador fullstack")
-    else:
-        print("Título desconocido")
+if 'JavaScript' and 'React' in persona['skills']:
+    print("El es un desarrollador frontend")
+if 'Node' and 'python' and 'MongoDB' in persona['skills']:
+    print("El es un desarrollador backend")
+if 'React' and 'Node' and 'MongoDB' in persona['skills']:
+    print("El es un desarrollador fullstack")
+else:
+    print("Titulo desconocido")
 
 
 #EJERCICIO 01------------------------------------------------------------------#EJERCICIO 01-----------------------------------------------------------------------------------------------------
