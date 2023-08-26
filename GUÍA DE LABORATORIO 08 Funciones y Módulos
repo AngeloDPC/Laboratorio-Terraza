@@ -1,0 +1,93 @@
+ESTUDIANTE: Pandia Cáceres, Angelo Daniel.
+CÓDIGO : 27220119
+
+#EJERCICIO 01------------------------------------------------------------------------#EJERCICIO 01-------------------------------------------------------------------------------------------------
+import CountryData
+print("--------------a-------------")
+CountryData.idioma_descendente()
+print("--------------b-------------")
+CountryData.paises_poblados()   
+
+#a--------------------------------------------------------a-----------------------------------------a
+def idioma_descendente():
+#Importado mediante función (def)
+def idioma_descendente():
+    language_count = {}
+    for country in countries:
+        for language in country["languages"]:
+            if language in language_count:
+                language_count[language] += 1
+            else:
+                language_count[language] = 1
+
+    sorted_languages = sorted(language_count.items(), key=lambda x: x[1], reverse=True)
+    top_languages = sorted_languages[:20]
+
+    print("Los 20 idiomas más hablados: ")
+    for lang, count in top_languages:
+        print(f"{lang}: {count} países")
+#b--------------------------------------------------------b------------------------------------------b
+def paises_poblados():
+    sorted_countries = sorted(countries, key=lambda x: x["population"], reverse=True)
+    top_populated_countries = sorted_countries[:20]
+
+    print("Los 20 países más poblados: ")
+    for country in top_populated_countries:
+        print(f"{country['name']}: {country['population']} personas")
+
+
+
+
+
+
+
+#EJERCICIO 02------------------------------------------------------------------------#EJERCICIO 02-------------------------------------------------------------------------------------------------
+#Averiguar sobre el módulo SYS
+import sys
+#1
+sys.exit()
+#Permite el manejo de exepciones....
+#Se puede pasar un argumento; un número entero, 0 = programa finalizado correctamente, 1 y -1 = ERROR; asimismo, mediante texto, se sobrenetiende el Error.
+print(f'La suma de {n1} y {n2} es {suma(n1,n2)}')
+sys.exit(0)
+
+#2
+sys.executable
+#Es un atributo, nos devuelve la ruta completa del ejecutable de python. Acceso al archivo ejecutado por el programa (mediante versiones python)
+print("modo de uso: ")
+print(f'{sys.executable} {sys.argv[0]} numero1 numero2')
+print("Ejemplo")
+print(f'{sys.executable} {sys.argv[0]} 4 8')
+
+#3
+sys.argv
+#Es un atributo, se guardan los parámetros al ejecutar un programa. Nos permite modificar el comportamiento de un programa dependiendo de los argumentos 
+#que le pasemos al ejecutarlo.
+try:
+    n1 = int(sys.argv[1])
+except ValueError:
+    print("Error: El n1 no es un número")
+    sys.exit(1) 
+
+
+#más información, enlace: https://docs.python.org/es/3.11/library/sys.html
+
+
+
+
+
+
+#EJERCICIO 03------------------------------------------------------------------------#EJERCICIO 03-------------------------------------------------------------------------------------------------
+import random
+import string
+
+print("Contraseña: ")
+minus = string.ascii_lowercase
+mayus = string.ascii_uppercase
+num = string.digits
+simb= string.punctuation
+
+unir = minus + mayus + num + simb
+
+temp = random.sample(unir, 8)
+print("".join(temp))
