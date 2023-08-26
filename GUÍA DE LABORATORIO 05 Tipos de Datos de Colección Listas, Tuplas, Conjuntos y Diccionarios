@@ -1,0 +1,123 @@
+ESTUDIANTE: Pandia Cáceres, Angelo Daniel.
+CÓDIGO    : 27220119
+
+#EJERCICIO 01------------------------------------------------------------------#EJERCICIO 01--------------------------------------------------------------------------------------------------------------------------
+import numpy as np 
+edades = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+
+#a            #Orden:Edad mínima y máxima
+print(sorted(edades))
+mínimo = min(edades)
+máximo = max(edades)
+print("El mínimo número es: ",mínimo, " y el máximo número es: ",máximo)
+
+#b            #Edad mínima y máxima
+mínimo = min(edades)
+máximo = max(edades)
+print("El mínimo número es: ",mínimo, " y el máximo número es: ",máximo)
+
+#c            #La edad mediana
+nueva_lista = sorted(edades)
+print("La mediana es: ", np.median(edades))
+    
+#d            #El promedio
+cantidad = len(edades)
+suma = sum(edades)
+promedio = suma/cantidad
+print("El promedio es: ",promedio)
+
+#e            #rango de edades
+la_resta = max(edades)-min(edades)
+print(la_resta)
+
+#f            #compara el mínimo promedio y máximo promedio
+promedio_máximo = máximo - mínimo
+promedo_minimo = mínimo - máximo
+print("El promedio es: ", promedio_máximo, "y", promedo_minimo)
+
+
+
+
+
+
+#EJERCICIO 02------------------------------------------------------------------#EJERCICIO 02--------------------------------------------------------------------------------------------------------------------------
+frase = "Soy profesor y me encanta inspirar y enseñar a la gente"
+cadena = frase.split()
+print(set(cadena))
+print(len(set(cadena)))
+
+
+
+
+
+
+
+#EJERCICIO 03------------------------------------------------------------------#EJERCICIO 03--------------------------------------------------------------------------------------------------------------------------
+lista_1 =[1,2,3,4,5,6,7,8,9,10] 
+lista_2 =[5,6,7,8,9,10,11,12,13,14,15]
+lista_3 =[10,11,12,13,14,15,16,17,18,19,20]
+
+lt1 = set(lista_1)
+lt2 = set(lista_2)
+lt3 = set(lista_3)
+
+#a            #Convierte las listas en conjuntos.
+concatenar = lista_1 + lista_2 + lista_3
+print("La cantidad de números en las tres lista es: ", len(concatenar))
+print(set(sorted(concatenar)))
+
+
+#b            #Encuentra el conjunto de los números repetidos en las tres listas
+lt4 = lt1&lt2&lt3
+print(lt4)
+
+
+#c             Encuentra el conjunto de todos los números que están presentes en las tres listas.
+s = {*lista_1, *lista_2, *lista_3}
+print(s)
+
+
+#d            # Encuentra el conjunto de todos los números que están presentes en la primera lista, pero no en la última.
+l5 = lt1.difference(lt3)
+nuevo = sorted(l5)
+print(nuevo) 
+
+
+#e            # Convierte los conjuntos obtenidos en tuplas y suma el primer y último elemento de cada tupla.
+conjunto = set(sorted(concatenar))
+tupla = tuple(conjunto)
+sum = tupla[0] + tupla[-1]
+print(sum)
+
+             
+
+
+
+
+
+
+#EJERCICIO 04------------------------------------------------------------------#EJERCICIO 04--------------------------------------------------------------------------------------------------------------------------
+l1 = [("one",1), ("two",2), ("three",3), ("four",4), ("five",5)]
+l2 = [("one",1), ("two",2), ("six",6)]
+
+st1 = set(l1)
+st2 =set(l2)
+
+#a
+con = set(l1 + l2)
+print(con)
+
+#b
+nuevo = st1.intersection(sorted(st2))
+st3=set(nuevo)
+print((st3))
+
+#c
+nuevo1 = st1.symmetric_difference(st2)
+st4=set((nuevo1))
+print(st4)
+
+#d
+l3 = list(st3.union(st4))
+l3.sort(reverse = True)
+print(l3)
