@@ -1,0 +1,72 @@
+ESTUDIANTE: Pandia Cáceres, Angelo Daniel.
+CÓDIGO    : 27220119
+
+#EJERCICIO 01------------------------------------------------------------------#EJERCICIO 01-----------------------------------------------------------------------------------------------------
+try:
+    valor = int(input("Ingrese el valor a convertir: "))
+    print("La conversión de F -> C o C -> F")
+    temperatura = input(" ¿Desea convertir a C o F? ")
+    if temperatura == 'C':
+        conv = ((9*valor)/5)+32
+        print(conv)
+    elif temperatura == 'F':
+        conv = 5*(valor-32)/9
+        print(conv)
+    else:
+        print("Vuelva a intentarlo. Introduzca 'C' o 'F'")
+except ValueError:
+    print("Ocurrio un error de valor")
+
+
+
+#EJERCICIO 02------------------------------------------------------------------#EJERCICIO 02-----------------------------------------------------------------------------------------------------
+try:
+    print("Escoga el operador a usar (1-4)")
+    operador = input("1.Suma - 2.Resta - 3.Multiplicación - 4.División --> ")
+    num1 = int(input("Ingrese el primer número: "))
+    num2 = int(input("Ingrese el segundo número: "))
+    if operador == '1':
+        suma = num1 + num2 
+        print("La suma es: ",suma)
+    elif operador == '2':
+        resta = num1 - num2
+        print("La resta es: ",resta)
+    elif operador == '3':
+        multiplicación = num1 * num2
+        print("La multiplicación es: ", multiplicación)
+    elif operador == '4':
+        division = num1 / num2
+        print("La división es: ", division)
+    else:
+        print("Vuelva a intentarlo. Escoga un operador de 1-4.")
+except ValueError:
+    print("Ocurrio un error de valor, digite un número entero")
+except ZeroDivisionError:
+    num2 != 0
+    print("ERROR: El divisor no puede ser cero")
+
+
+
+
+#EJERCICIO 03------------------------------------------------------------------#EJERCICIO 03-----------------------------------------------------------------------------------------------------
+import random
+import string
+
+try:
+    gen_cont = lambda longitud: ''.join(random.choice(string.ascii_lowercase + string.ascii_uppercase + string.punctuation + string.digits) for x in range(longitud))
+    long = 8
+    print("¿cuántas contraseñas quiere generar? ")
+    i = int(input("--->"))
+    unir = [gen_cont(long) for x in range(i)] 
+    for i,f in enumerate(unir, start=1):
+        print("Las contraseñas generadas son: ")
+        print("--->",f)
+
+except ValueError:
+     print("Error: el valor no es numérico:")
+
+
+
+
+
+
